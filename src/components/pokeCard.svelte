@@ -1,11 +1,12 @@
 <script>
     import { base } from '$app/paths';
+    import { fade } from "svelte/transition";
     export let name;
     export let id;
     export let image;
 </script>
 
-<a 
+<a  transition:fade="{{duration: 300}}"
     class="p-6 bg-gray-100 hover:bg-gray-300 text-gray-800 text-center rounded-md shadow-sm hover:shadow-md flex flex-col items-center" 
     href={`${base}/pokemon/${id}`}> 
     
